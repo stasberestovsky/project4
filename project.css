@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  background-image: url("https://www.fft.ie/wp-content/uploads/2017/11/pexels-photo-208745.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+body:before {
+  content: "";
+  background: linear-gradient( white, rgba(255,255,255, 0));
+  position: absolute;
+  height: 100%;
+  width: 100%; 
+}
+
+nav {
+  text-align: center;
+  padding: 40px 0 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.topmenu > li > a {
+  position: relative;
+  padding: 10px 15px;
+  font-family:  "Times New Roman";
+  font-size: 30px;
+  font-weight:bold;  
+}
+
+.topmenu li:hover a:before {
+  transform: translate(-50%, 0);
+ 
+}
+.submenu {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 150px;
+  padding: 15px 0 15px;
+  margin-top: 5px;
+  background: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 20px);
+  transition: .3s;
+}
+.topmenu > li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.submenu a {
+  font-family:  "Times New Roman";
+  font-size: 15px;
+  padding: 5px 10px;
+  transition: .2s linear;
+}
+.submenu a:hover {background: #e8e8e8;}
